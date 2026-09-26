@@ -1,44 +1,38 @@
-# Cara & Lila — Public storefront
+# Cara & Lila — Social storefront
 
-Public website for **caraandlila.com**: who Cara and Lila are, what they’re recommending/selling, and links to their socials.
+Audience-facing site for **caraandlila.com**.
 
-Not the Cornerstone OS app (`app.cornerstoneaigroup.com`). This is the audience-facing shop/profile surface.
+The site is intentionally **consumer/social-first**: the homepage works like a Linktree-style creator profile for traffic coming from TikTok and Instagram, while **/shop** is the storefront layer for future TikTok Shop, affiliate and direct product links.
 
 ## Stack
 
-- Static HTML/CSS (no build step)
-- Deployed on **Vercel** from this repo
+- Static HTML/CSS
+- Deployed on Vercel from this repo
 - Domain: `caraandlila.com`
 
-## Deploy (Vercel)
+## Structure
 
-1. [vercel.com](https://vercel.com) → **Add New Project** → Import `100492107/caraandlila`
-2. Framework preset: **Other** (static)
-3. Root directory: `.` · Build command: leave empty · Output: `.`
-4. Deploy → you get `*.vercel.app`
-5. **Settings → Domains** → add `caraandlila.com` and `www.caraandlila.com`
-6. In your DNS provider, set the records Vercel shows (typical):
+- `index.html` — creator profile, social links and link hub
+- `styles.css` — shared visual system
+- `shop.html` — consumer storefront and product shelves
+- `assets/cara.svg` + `assets/lila.svg` — creator artwork
+- `vercel.json` — static deployment/security configuration
 
-   | Type  | Name | Value |
-   |-------|------|--------|
-   | A     | `@`  | `76.76.21.21` |
-   | CNAME | `www`| `cname.vercel-dns.com` |
+## Adding products
 
-7. Remove old **Netlify** A/CNAME records for this domain so they don’t conflict.
+When a real product goes live, replace the relevant shop card copy/link with the live destination (TikTok Shop, affiliate network, retailer or direct store).
 
-## Edit content
+Keep commercial links clearly labelled. Avoid invented reviews, results or product claims.
 
-- Product cards, social URLs, and copy live in `index.html`
-- Styles in `styles.css`
-- Placeholder product links: replace `#` with real affiliate / TikTok Shop / Instagram URLs when ready
+## Social links
 
-## Creators
+The public site currently links to:
 
-| | Cara | Lila |
-|--|------|------|
-| Lens | **BUILD** — agency, earned progress, useful finds | **NOTICE** — presence, taste, considered lifestyle |
-| Disclosure | AI-native creators; content is labelled; commercial links disclosed | Same |
+- TikTok: https://www.tiktok.com/@caraandlila
+- Instagram: https://www.instagram.com/caraandlila/
+- YouTube: https://www.youtube.com/@caraandlila
 
 ## Related
 
-- Operating system / production: [caig-app](https://github.com/100492107/caig-app) → `app.cornerstoneaigroup.com`
+- Cornerstone OS: https://app.cornerstoneaigroup.com
+- Production repo: https://github.com/100492107/caraandlila
