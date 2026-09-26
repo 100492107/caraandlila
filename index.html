@@ -1,148 +1,98 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="theme-color" content="#f4efe8">
-  <meta name="description" content="Cara + Lila. Come hang out with us.">
-  <title>Cara + Lila</title>
-  <link rel="stylesheet" href="/styles.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<title>Cara & Lila</title>
+<meta name="description" content="Cara and Lila — the finds we actually use. Shop links and socials."/>
+<meta name="theme-color" content="#0a0a0a"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+:root{--bg:#0a0a0a;--card:#141414;--line:rgba(255,255,255,.1);--text:#faf7f2;--muted:#a39e96;--gold:#d4b56a;--max:420px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"DM Sans",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100dvh;line-height:1.45;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+.page{width:min(100%,var(--max));margin:0 auto;padding:1.25rem 1rem 2.75rem}
+.brand{text-align:center;margin-bottom:1.15rem}
+.brand h1{font-size:1.4rem;font-weight:700;letter-spacing:-.03em}
+.brand h1 span{color:var(--gold)}
+.brand p{margin-top:.3rem;font-size:.88rem;color:var(--muted)}
+.faces{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1.2rem}
+.face{position:relative;border-radius:20px;overflow:hidden;border:1px solid var(--line);aspect-ratio:1;background:#111}
+.face img{width:100%;height:100%;object-fit:cover;display:block}
+.face .label{position:absolute;left:0;right:0;bottom:0;padding:.65rem .7rem .75rem;background:linear-gradient(transparent,rgba(0,0,0,.78));font-size:.8rem;font-weight:700}
+.face .label em{display:block;font-style:normal;font-weight:500;font-size:.68rem;color:rgba(255,255,255,.72);margin-top:.12rem}
+.intro{text-align:center;font-size:.9rem;color:var(--muted);margin-bottom:1.2rem}
+.links{display:grid;gap:.6rem;margin-bottom:1.65rem}
+.link{display:flex;align-items:center;justify-content:center;min-height:52px;padding:.85rem 1rem;border-radius:999px;border:1px solid var(--line);background:var(--card);font-size:.92rem;font-weight:600;text-align:center}
+.link:hover{border-color:rgba(255,255,255,.22);background:#1a1a1a}
+.link.gold{background:var(--gold);color:#1a150c;border-color:transparent}
+.link.stack{flex-direction:column;border-radius:16px;min-height:auto;padding:1rem}
+.link .sub{display:block;font-size:.7rem;font-weight:500;opacity:.78;margin-top:.12rem}
+.shop-head{font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;text-align:center;margin-bottom:.7rem}
+.products{display:grid;gap:.65rem;margin-bottom:1.4rem}
+.product{display:grid;grid-template-columns:84px 1fr;gap:.8rem;align-items:center;padding:.65rem;border-radius:16px;border:1px solid var(--line);background:var(--card)}
+.product img{width:84px;height:84px;border-radius:12px;object-fit:cover}
+.product .who{font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;font-weight:700;color:var(--gold);margin-bottom:.12rem}
+.product h3{font-size:.9rem;font-weight:650;margin-bottom:.15rem}
+.product p{font-size:.76rem;color:var(--muted);margin-bottom:.35rem}
+.product .go{font-size:.74rem;font-weight:700;color:var(--gold)}
+.foot{text-align:center;font-size:.7rem;color:#6a6560;line-height:1.5}
+.foot strong{color:var(--muted);font-weight:600}
+</style>
 </head>
 <body>
-  <header class="site-header">
-    <a class="logo" href="/">cara <i>+</i> lila</a>
-    <nav>
-      <a href="#lately">Lately</a>
-      <a href="/shop">Shop</a>
-    </nav>
+<div class="page">
+  <header class="brand">
+    <h1>Cara <span>&</span> Lila</h1>
+    <p>the things we actually use</p>
   </header>
-
-  <main>
-    <section class="hero shell">
-      <div class="hero-photo">
-        <img src="/assets/cara-lila-hero.webp" alt="Cara and Lila">
-      </div>
-
-      <div class="hero-copy">
-        <p class="kicker">HI, WE’RE CARA + LILA</p>
-        <h1>Come hang out<br><em>with us.</em></h1>
-        <p class="lead">I’m Cara. I like having a plan, making things happen and getting somewhere. I’m Lila. I like taking the long way, noticing the good bits and remembering why we went.</p>
-        <p class="lead muted">We disagree about plenty. We agree about more than we expected.</p>
-
-        <div class="socials">
-          <a class="dark-pill" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">TikTok <span>↗</span></a>
-          <a href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener">Instagram <span>↗</span></a>
-          <a href="https://www.youtube.com/@caraandlila" target="_blank" rel="noopener">YouTube <span>↗</span></a>
-        </div>
-
-        <div class="links">
-          <a class="big-link dark" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">
-            <span class="link-no">01</span>
-            <span class="link-body"><strong>Watch us</strong><small>Trips, getting ready, little arguments and whatever happened today.</small></span>
-            <span class="link-arrow">↗</span>
-          </a>
-          <a class="big-link" href="/shop">
-            <span class="link-no">02</span>
-            <span class="link-body"><strong>See what we’re buying</strong><small>The things we actually keep reaching for.</small></span>
-            <span class="link-arrow">→</span>
-          </a>
-          <a class="big-link" href="#lately">
-            <span class="link-no">03</span>
-            <span class="link-body"><strong>See what we’re into lately</strong><small>Places, clothes, little routines and random discoveries.</small></span>
-            <span class="link-arrow">↓</span>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="quote shell">
-      <div class="quote-rule"></div>
-      <p class="kicker">US, MOST DAYS</p>
-      <h2>I’m usually trying to <em>move.</em><br>I’m usually trying to <em>notice.</em></h2>
-      <div class="quote-copy">
-        <p>Sometimes I’m the one asking, “Is this actually worth it?”</p>
-        <p>Sometimes I’m the one saying, “Look at that.”</p>
-        <p>We make plans. We change them. We go anyway.</p>
-      </div>
-    </section>
-
-    <section class="profiles shell">
-      <article class="profile-card cara">
-        <div class="profile-card-head">
-          <p class="kicker">I’M CARA</p>
-          <span>01</span>
-        </div>
-        <h3>I like figuring<br>things out.</h3>
-        <p>I want a better life, and I like knowing I did something to make it happen. I care about being capable, having choices and spending money on things that genuinely make life better.</p>
-        <a href="/shop#cara">Come see my picks →</a>
-      </article>
-
-      <article class="profile-card lila">
-        <div class="profile-card-head">
-          <p class="kicker">I’M LILA</p>
-          <span>02</span>
-        </div>
-        <h3>I like noticing<br>the good bits.</h3>
-        <p>I notice the light, the room, the place, the little details and the things I’ll remember later. I like quality. I don’t think everything needs to be a big deal.</p>
-        <a href="/shop#lila">Come see my picks →</a>
-      </article>
-    </section>
-
-    <section class="lately shell" id="lately">
-      <div class="section-intro">
-        <div>
-          <p class="kicker">LATELY</p>
-          <h2>What’s been<br><em>on our mind.</em></h2>
-        </div>
-        <a class="plain-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">See the feed ↗</a>
-      </div>
-
-      <div class="lately-grid">
-        <a href="/shop#travel" class="lately-card one">
-          <span>01 · TRAVEL</span>
-          <strong>We should go.</strong>
-          <small>I want to get there. She wants to look around first.</small>
-        </a>
-        <a href="/shop#style" class="lately-card two">
-          <span>02 · STYLE</span>
-          <strong>Wear the good one.</strong>
-          <small>Not everything needs to wait for an occasion.</small>
-        </a>
-        <a href="/shop#home" class="lately-card three">
-          <span>03 · HOME</span>
-          <strong>Make home feel like us.</strong>
-          <small>Useful, pretty, occasionally unnecessary.</small>
-        </a>
-      </div>
-    </section>
-
-    <section class="shop-block shell">
-      <div class="shop-copy">
-        <p class="kicker">OUR SHOP</p>
-        <h2>We don’t want<br><em>everything.</em></h2>
-        <p>We just keep the things that make us stop, look twice, and think about them again tomorrow.</p>
-        <a class="shop-button" href="/shop">Come shopping →</a>
-      </div>
-      <div class="shop-wordmark">C<span>+</span>L</div>
-    </section>
-  </main>
-
-  <footer class="site-footer shell">
-    <div>
-      <a class="logo" href="/">cara <i>+</i> lila</a>
-      <p>We’re AI-created characters with our own little world. Some links may be affiliate links; when they are, we label them.</p>
+  <div class="faces">
+    <div class="face">
+      <img src="/assets/cara-portrait.jpg" alt="Cara" width="480" height="480"/>
+      <div class="label">Cara<em>practical picks</em></div>
     </div>
-    <div class="footer-links">
-      <a href="/shop">Shop</a>
-      <a href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">TikTok</a>
-      <a href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener">Instagram</a>
+    <div class="face">
+      <img src="/assets/lila-portrait.jpg" alt="Lila" width="480" height="480"/>
+      <div class="label">Lila<em>considered finds</em></div>
     </div>
-  </footer>
-
-  <div class="mobile-bar">
-    <a href="/">Home</a>
-    <a href="/shop">Shop</a>
-    <a href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">Watch</a>
   </div>
+  <p class="intro">
+    We’re two different girls with different eyes —
+    Cara sorts what works, Lila notices what feels right.
+    Everything here is something we’d actually send you to.
+  </p>
+  <div class="links">
+    <a class="link gold stack" href="#shop">Shop our picks<span class="sub">TikTok Shop & affiliate links</span></a>
+    <a class="link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">Watch us on TikTok</a>
+    <a class="link" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    <a class="link" href="https://www.youtube.com/@caraandlila" target="_blank" rel="noopener noreferrer">YouTube</a>
+  </div>
+  <p class="shop-head" id="shop">Featured right now</p>
+  <div class="products">
+    <a class="product" href="#" rel="sponsored noopener noreferrer">
+      <img src="/assets/cara-lifestyle.jpg" alt="" width="84" height="84"/>
+      <div>
+        <div class="who">Cara’s pick</div>
+        <h3>Your product name</h3>
+        <p>Why she links it — one short line.</p>
+        <span class="go">Shop →</span>
+      </div>
+    </a>
+    <a class="product" href="#" rel="sponsored noopener noreferrer">
+      <img src="/assets/lila-lifestyle.jpg" alt="" width="84" height="84"/>
+      <div>
+        <div class="who">Lila’s pick</div>
+        <h3>Your product name</h3>
+        <p>Why she links it — one short line.</p>
+        <span class="go">Shop →</span>
+      </div>
+    </a>
+  </div>
+  <footer class="foot">
+    <p><strong>Heads up.</strong> Some links are affiliate or shop links — we may earn a commission if you buy. We’re AI-created characters; we don’t invent fake reviews.</p>
+    <p style="margin-top:.7rem">caraandlila.com</p>
+  </footer>
+</div>
 </body>
 </html>
