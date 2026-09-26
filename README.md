@@ -1,38 +1,38 @@
-# Cara & Lila — Social storefront
+# Cara & Lila — link in bio + shop
 
-Audience-facing site for **caraandlila.com**.
+Mobile-first page for TikTok / Instagram **link in bio** traffic.
 
-The site is intentionally **consumer/social-first**: the homepage works like a Linktree-style creator profile for traffic coming from TikTok and Instagram, while **/shop** is the storefront layer for future TikTok Shop, affiliate and direct product links.
+This is *their* page — not a company brochure.
 
-## Stack
+## Strategy (why it’s built this way)
 
-- Static HTML/CSS
-- Deployed on Vercel from this repo
-- Domain: `caraandlila.com`
+Creators only get **one** external link on TikTok. Best practice:
 
-## Structure
+1. **Faces first** — instant recognition  
+2. **Few big buttons** — Shop, TikTok, Instagram, YouTube  
+3. **Featured products** — direct affiliate / TikTok Shop URLs  
+4. **Short disclosure** — affiliate honesty without sounding corporate  
 
-- `index.html` — creator profile, social links and link hub
-- `styles.css` — shared visual system
-- `shop.html` — consumer storefront and product shelves
-- `assets/cara.svg` + `assets/lila.svg` — creator artwork
-- `vercel.json` — static deployment/security configuration
+Avoid long magazine layouts. People arrive from a video and want the product in 1–2 taps.
 
-## Adding products
+## Files
 
-When a real product goes live, replace the relevant shop card copy/link with the live destination (TikTok Shop, affiliate network, retailer or direct store).
+- `index.html` — the whole experience (Linktree-style)
+- `assets/cara-portrait.jpg` · `lila-portrait.jpg` — faces  
+- `assets/cara-lifestyle.jpg` · `lila-lifestyle.jpg` — product thumbs  
 
-Keep commercial links clearly labelled. Avoid invented reviews, results or product claims.
+Upload those four images into `assets/` if missing (GitHub → Add file → Upload files).
 
-## Social links
+## Product links
 
-The public site currently links to:
+Replace `#` on the two product cards with live Shop or affiliate URLs. Update title + one-line reason in Cara’s / Lila’s voice.
 
-- TikTok: https://www.tiktok.com/@caraandlila
-- Instagram: https://www.instagram.com/caraandlila/
-- YouTube: https://www.youtube.com/@caraandlila
+## Socials
 
-## Related
+- https://www.tiktok.com/@caraandlila  
+- https://www.instagram.com/caraandlila/  
+- https://www.youtube.com/@caraandlila  
 
-- Cornerstone OS: https://app.cornerstoneaigroup.com
-- Production repo: https://github.com/100492107/caraandlila
+## Domain
+
+`caraandlila.com` → Vercel project for this repo.
