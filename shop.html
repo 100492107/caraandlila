@@ -1,134 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#171416">
-  <meta name="description" content="Our shop — the things Cara and Lila have actually chosen.">
-  <title>Our Shop — Cara + Lila</title>
-  <link rel="stylesheet" href="/styles.css">
-  <style>
-    body.shop-page{background:#f4efe9}
-    .shop-shell{width:min(calc(100% - 32px),1120px);margin:0 auto}
-    .shop-hero{padding:34px 0 22px}
-    .shop-hero-inner{background:#171416;color:#fff;border-radius:34px;padding:40px;min-height:390px;display:flex;align-items:end;position:relative;overflow:hidden}
-    .shop-hero-inner:before{content:"";position:absolute;width:440px;height:440px;right:-140px;top:-170px;border-radius:50%;background:radial-gradient(circle,#ef9eb3 0 19%,#8c7bd3 50%,transparent 71%);opacity:.9}
-    .shop-hero-inner:after{content:"BUILD   NOTICE";position:absolute;right:28px;bottom:23px;color:rgba(255,255,255,.17);font-size:10px;letter-spacing:.22em;font-weight:950}
-    .shop-k{position:relative;z-index:2;color:#f3b6c6;font-size:10px;letter-spacing:.18em;font-weight:950}
-    .shop-hero h1{position:relative;z-index:2;font-size:clamp(45px,7vw,78px);line-height:.89;letter-spacing:-.075em;margin:12px 0 12px;max-width:750px}
-    .shop-hero h1 em{font-family:Georgia,serif;font-weight:500}
-    .shop-hero p{position:relative;z-index:2;color:#cec5c6;max-width:520px;margin:0;font-size:14px}
-    .shop-actions{position:relative;z-index:2;display:flex;gap:8px;margin-top:19px}
-    .shop-actions a{padding:10px 13px;border-radius:999px;background:#fff;color:#171416;font-size:11px;font-weight:900}
-    .shop-actions .ghost{background:rgba(255,255,255,.09);border:1px solid rgba(255,255,255,.16);color:#fff}
-    .shop-nav{position:sticky;top:0;z-index:10;display:flex;gap:7px;flex-wrap:wrap;padding:16px 0 10px;background:rgba(244,239,233,.94);backdrop-filter:blur(14px)}
-    .shop-nav a{padding:8px 12px;border-radius:999px;background:#fff;border:1px solid #ddd4ce;font-size:11px;font-weight:900}
-    .shop-intro{margin:8px 0 10px;padding:14px 15px;border:1px dashed #d5cbc5;border-radius:17px;background:#fbf8f4;color:#746a6e;font-size:11px}
-    .shop-intro strong{color:#2b2527}
-    .collection{padding:48px 0 10px;scroll-margin-top:72px}
-    .collection-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:16px}
-    .collection-head h2{margin:0;font-size:32px;letter-spacing:-.055em;line-height:.95}
-    .collection-head p{margin:0;max-width:480px;color:#776d71;font-size:12px}
-    .collection-head .eyebrow{margin-bottom:7px}
-    .collection-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}
-    .item{background:#fff;border:1px solid #e5dbd6;border-radius:24px;overflow:hidden;box-shadow:0 10px 36px rgba(25,18,20,.04);transition:.2s ease}
-    .item:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(25,18,20,.07)}
-    .item-visual{min-height:270px;position:relative;overflow:hidden;display:flex;align-items:end;padding:15px}
-    .item-visual:before{content:"";position:absolute;inset:0}
-    .item-visual.cara-v:before{background:linear-gradient(140deg,#f6cbd4,#d6c2dc 55%,#b8beca)}
-    .item-visual.lila-v:before{background:linear-gradient(140deg,#e7dffc,#f2d8db 54%,#e8c9ad)}
-    .item-visual.duo-v:before{background:linear-gradient(140deg,#d6e1de,#ebdfc5 52%,#ddc4ca)}
-    .item-icon{position:absolute;inset:35px;border-radius:24px;background:rgba(255,255,255,.28);border:1px solid rgba(255,255,255,.5);display:grid;place-items:center;font-size:58px;box-shadow:0 25px 45px rgba(45,27,33,.1)}
-    .tag{position:relative;z-index:2;padding:6px 8px;border-radius:999px;background:rgba(23,20,22,.8);color:#fff;font-size:9px;letter-spacing:.14em;font-weight:950}
-    .item-body{padding:16px}.item-body h3{margin:0;font-size:19px;letter-spacing:-.035em}.item-body p{margin:6px 0 15px;color:#7d7477;font-size:12px;line-height:1.48}
-    .item-foot{display:flex;justify-content:space-between;align-items:center;gap:8px}.status{font-size:9px;font-weight:950;letter-spacing:.12em;color:#a09295}.watch{padding:9px 11px;border-radius:999px;background:#171416;color:#fff;font-size:10px;font-weight:900}
-    .shop-quote{margin:44px 0 12px;border-top:1px solid #ddd3cd;border-bottom:1px solid #ddd3cd;padding:25px 0;color:#645b5e;font-family:Georgia,serif;font-size:25px;line-height:1.1;max-width:750px}
-    .shop-footer{padding:48px 0 94px;color:#968a8d;font-size:10px}
-    .shop-footer a{font-weight:900;color:#51484b}
-    @media(max-width:850px){.collection-grid{grid-template-columns:repeat(2,1fr)}}
-    @media(max-width:600px){
-      .shop-hero-inner{padding:28px 22px 30px;border-radius:27px;min-height:390px}
-      .shop-hero h1{font-size:49px}
-      .collection-head{display:block}.collection-head p{margin-top:5px}
-      .collection-grid{grid-template-columns:1fr}.item-visual{min-height:290px}
-    }
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Our Shop — Cara + Lila</title>
+<meta name="description" content="The things Cara and Lila keep coming back to.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+<style>
+.shop-page{background:#f4eee6}.shop-wrap{width:min(calc(100% - 44px),1180px);margin:auto}
+.shop-hero{padding:25px 0 35px}.shop-hero-box{background:#191718;color:#fff;border-radius:30px;min-height:420px;padding:44px;display:flex;align-items:end;position:relative;overflow:hidden}.shop-hero-box:after{content:"C + L";position:absolute;right:-18px;bottom:-80px;font-size:270px;font-weight:700;color:rgba(255,255,255,.045);letter-spacing:-.13em}.shop-hero-content{position:relative;z-index:2;max-width:690px}.shop-hero-box .eyebrow{color:#d9a1b2}.shop-hero h1{font-size:clamp(50px,6.5vw,82px);line-height:.88;letter-spacing:-.075em;margin:0 0 17px}.shop-hero h1 em{font-family:"DM Serif Display",Georgia,serif;font-style:italic;font-weight:400}.shop-hero p{max-width:540px;color:#cbc2c4;font-size:14px;line-height:1.55;margin:0}.shop-tabs{display:flex;gap:7px;flex-wrap:wrap;position:sticky;top:0;z-index:10;padding:14px 0 9px;background:rgba(244,238,230,.94);backdrop-filter:blur(12px)}.shop-tabs a{font-size:10px;font-weight:700;padding:8px 11px;border:1px solid #ded3ca;background:#fff;border-radius:99px}
+.shop-intro{padding:18px 0 5px;color:#74686c;font-size:11px;max-width:700px}.shop-intro strong{color:#342d30}
+.shop-section{padding:56px 0 10px;scroll-margin-top:72px}.shop-section-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin-bottom:16px}.shop-section-head h2{font-size:34px;line-height:.95;letter-spacing:-.055em;margin:0}.shop-section-head p{font-size:12px;color:#786d70;max-width:470px;margin:0}.shop-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:13px}.shop-card{background:#fff;border:1px solid #e4dad3;border-radius:22px;overflow:hidden;box-shadow:0 10px 30px rgba(26,19,21,.035)}.shop-image{height:270px;position:relative;overflow:hidden}.shop-image img{position:absolute;inset:0}.shop-image.cara-bg{background:linear-gradient(140deg,#edc6ce,#dfc2d7)}.shop-image.lila-bg{background:linear-gradient(140deg,#e4ddf7,#efd8d8)}.shop-image.duo-bg{background:linear-gradient(140deg,#d3e1dc,#ead7bd)}.shop-symbol{position:absolute;inset:28px;border-radius:22px;background:rgba(255,255,255,.32);border:1px solid rgba(255,255,255,.5);display:grid;place-items:center;font-size:48px}.shop-tag{position:absolute;left:14px;bottom:14px;background:rgba(22,20,21,.82);color:#fff;padding:6px 8px;border-radius:99px;font-size:8px;letter-spacing:.14em;font-weight:700}.shop-body{padding:16px}.shop-body h3{font-size:19px;line-height:1.0;letter-spacing:-.04em;margin:0 0 7px}.shop-body p{font-size:11px;line-height:1.5;color:#786d71;margin:0 0 14px}.shop-link{display:inline-block;font-size:10px;font-weight:700;padding-bottom:4px;border-bottom:1px solid #c4b8ba}
+.shop-quote{padding:54px 0 15px;border-bottom:1px solid #ddd2ca}.shop-quote p{font-family:"DM Serif Display",Georgia,serif;font-style:italic;font-size:32px;line-height:1;letter-spacing:-.03em;max-width:800px;color:#5e5458;margin:0}
+.shop-footer{padding:45px 0 90px;color:#988c90;font-size:9px}.shop-footer a{font-weight:700;color:#5e5458}
+@media(max-width:850px){.shop-grid{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.shop-wrap{width:min(calc(100% - 24px),1180px)}.shop-hero-box{padding:28px 23px;min-height:390px;border-radius:24px}.shop-hero h1{font-size:49px}.shop-grid{grid-template-columns:1fr}.shop-image{height:285px}.shop-section-head{display:block}.shop-section-head p{margin-top:5px}.shop-quote p{font-size:26px}}
+</style>
 </head>
 <body class="shop-page">
-  <header class="topbar">
-    <a class="wordmark" href="/">cara <span>+</span> lila</a>
-    <nav class="desktop-nav"><a href="/">Home</a><a href="/shop">Shop</a></nav>
-  </header>
+<header class="site-header shop-wrap"><a class="logo" href="/">cara <span>+</span> lila</a><nav><a href="/">Home</a><a href="/shop">Shop</a></nav></header>
+<main class="shop-wrap">
+<section class="shop-hero"><div class="shop-hero-box"><div class="shop-hero-content"><p class="eyebrow">OUR SHOP</p><h1>The things we<br><em>keep choosing.</em></h1><p>We don’t need everything. We just keep the things we wear again, use all the time, notice twice or still talk about when we get home.</p></div></div></section>
+<nav class="shop-tabs"><a href="#cara">Cara</a><a href="#lila">Lila</a><a href="#together">Us</a><a href="#style">Style</a><a href="#home">Home</a><a href="#travel">Travel</a></nav>
+<div class="shop-intro"><strong>A little note from us:</strong> when we link something here, it’s because it’s part of our world. Some links are affiliate links or shop links; we’ll say when they are.</div>
 
-  <main class="shop-shell">
-    <section class="shop-hero">
-      <div class="shop-hero-inner">
-        <div>
-          <div class="shop-k">CARA + LILA · OUR SHOP</div>
-          <h1>These are the things<br><em>we actually chose.</em></h1>
-          <p>I’m not trying to fill a shop with everything on the internet. I’m keeping the things that fit our lives — useful, beautiful, memorable, or just very hard to stop thinking about.</p>
-          <div class="shop-actions"><a href="#cara">Start with my picks ↓</a><a class="ghost" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">Back to our feed ↗</a></div>
-        </div>
-      </div>
-    </section>
+<section class="shop-section" id="cara"><div class="shop-section-head"><div><p class="eyebrow">I’M CARA</p><h2>Things I keep<br>coming back to.</h2></div><p>I’m not interested in a giant list. I like useful, capable, worth-it things — the stuff that earns its space.</p></div><div class="shop-grid">
+<article class="shop-card"><div class="shop-image cara-bg"><div class="shop-symbol">↗</div><span class="shop-tag">MY EDIT</span></div><div class="shop-body"><h3>The useful stuff</h3><p>Things that make life work a little better. Actual products will appear here as I share them.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">See what I’m using →</a></div></article>
+<article class="shop-card"><div class="shop-image cara-bg"><div class="shop-symbol">◌</div><span class="shop-tag">MY EDIT</span></div><div class="shop-body"><h3>The worth-it list</h3><p>Stuff I’d spend my own money on and still feel good about afterwards.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">Come with me →</a></div></article>
+<article class="shop-card"><div class="shop-image cara-bg"><div class="shop-symbol">⚡</div><span class="shop-tag">MY EDIT</span></div><div class="shop-body"><h3>The little upgrades</h3><p>Training, organisation, routines, tech and everyday things I’ve kept for a reason.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">See my feed →</a></div></article>
+</div></section>
 
-    <nav class="shop-nav" aria-label="Shop categories">
-      <a href="#cara">My picks — Cara</a><a href="#lila">My picks — Lila</a><a href="#together">Our picks</a><a href="#style">Style</a><a href="#beauty">Beauty</a><a href="#home">Home</a><a href="#travel">Travel</a>
-    </nav>
+<section class="shop-section" id="lila"><div class="shop-section-head"><div><p class="eyebrow">I’M LILA</p><h2>Things I notice<br>and keep.</h2></div><p>I’m selective. I want things that feel good, look good and still make sense once the novelty has worn off.</p></div><div class="shop-grid">
+<article class="shop-card"><div class="shop-image lila-bg"><div class="shop-symbol">✧</div><span class="shop-tag">MY EDIT</span></div><div class="shop-body"><h3>The beautiful things</h3><p>Style, beauty and little details that I actually want around me.</p><a class="shop-link" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener">See my feed →</a></div></article>
+<article class="shop-card"><div class="shop-image lila-bg"><div class="shop-symbol">⌂</div><span class="shop-tag">MY EDIT</span></div><div class="shop-body"><h3>The home things</h3><p>Objects, textures and small changes that make a room feel more like home.</p><a class="shop-link" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener">Come with me →</a></div></article>
+<article class="shop-card"><div class="shop-image lila-bg"><div class="shop-symbol">✿</div><span class="shop-tag">MY EDIT</span></div><div class="shop-body"><h3>The little luxuries</h3><p>The things that aren’t necessary. Just very nice to have.</p><a class="shop-link" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener">See my feed →</a></div></article>
+</div></section>
 
-    <div class="shop-intro"><strong>A little note from us:</strong> when we share something because we genuinely think it’s worth looking at, it ends up here. When a link is commercial or affiliate, we’ll say so.</div>
+<section class="shop-section" id="together"><div class="shop-section-head"><div><p class="eyebrow">US</p><h2>The things<br>we both kept.</h2></div><p>That doesn’t happen automatically. These are the things where neither of us wanted to change the other one’s mind.</p></div><div class="shop-grid">
+<article class="shop-card"><div class="shop-image duo-bg"><div class="shop-symbol">+</div><span class="shop-tag">OUR EDIT</span></div><div class="shop-body"><h3>The “fine, get it” one</h3><p>We both looked at it and, unusually, had nothing to argue about.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">See us →</a></div></article>
+<article class="shop-card"><div class="shop-image duo-bg"><div class="shop-symbol">✈</div><span class="shop-tag">OUR EDIT</span></div><div class="shop-body"><h3>The trip one</h3><p>Useful enough for me. Nice enough for her. It survived both tests.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">See our feed →</a></div></article>
+<article class="shop-card"><div class="shop-image duo-bg"><div class="shop-symbol">⌁</div><span class="shop-tag">OUR EDIT</span></div><div class="shop-body"><h3>The everyday one</h3><p>The little things that somehow become part of both our routines.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">Come along →</a></div></article>
+</div></section>
 
-    <section class="collection" id="cara">
-      <div class="collection-head"><div><p class="eyebrow">CARA / BUILD</p><h2>My useful things.<br>My good decisions.</h2></div><p>I like things that earn their place. Things that solve a problem, make the day work better, or are simply worth the money.</p></div>
-      <div class="collection-grid">
-        <article class="item"><div class="item-visual cara-v"><div class="item-icon">⚡</div><span class="tag">MY PICK</span></div><div class="item-body"><h3>The thing I keep reaching for</h3><p>Useful enough to become part of the routine.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">See why →</a></div></div></article>
-        <article class="item"><div class="item-visual cara-v"><div class="item-icon">◌</div><span class="tag">MY PICK</span></div><div class="item-body"><h3>The capability one</h3><p>Training, organisation, routines and everyday upgrades I actually care about.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">Come with me →</a></div></div></article>
-        <article class="item"><div class="item-visual cara-v"><div class="item-icon">↗</div><span class="tag">MY PICK</span></div><div class="item-body"><h3>The worth-it list</h3><p>I’m keeping this for things I can give you a reason to buy.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">See my feed →</a></div></div></article>
-      </div>
-    </section>
+<div class="shop-quote"><p>We’ll keep adding things as we actually discover them. That feels much better than pretending we’ve got a list of 500 favourites.</p></div>
 
-    <section class="collection" id="lila">
-      <div class="collection-head"><div><p class="eyebrow">LILA / NOTICE</p><h2>My beautiful things.<br>The ones I keep.</h2></div><p>I’m selective. I like things that make a room, an outfit, a trip or an ordinary day feel a little better.</p></div>
-      <div class="collection-grid">
-        <article class="item"><div class="item-visual lila-v"><div class="item-icon">✧</div><span class="tag">MY PICK</span></div><div class="item-body"><h3>The one I noticed</h3><p>Something small that stayed in my head after I left.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener noreferrer">Come with me →</a></div></div></article>
-        <article class="item"><div class="item-visual lila-v"><div class="item-icon">◡</div><span class="tag">LILA'S PICK</span></div><div class="item-body"><h3>The little luxury</h3><p>I like these when they genuinely improve the experience, not just the picture.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener noreferrer">See my feed →</a></div></div></article>
-        <article class="item"><div class="item-visual lila-v"><div class="item-icon">⌂</div><span class="tag">LILA'S PICK</span></div><div class="item-body"><h3>The place one</h3><p>Rooms, places and details I’d happily remember twice.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener noreferrer">See my feed →</a></div></div></article>
-      </div>
-    </section>
-
-    <section class="collection" id="together">
-      <div class="collection-head"><div><p class="eyebrow">CARA + LILA</p><h2>Things we both<br>agreed on.</h2></div><p>That doesn’t happen automatically. These are the things where Cara stopped trying to improve it and Lila stopped looking for something prettier.</p></div>
-      <div class="collection-grid">
-        <article class="item"><div class="item-visual duo-v"><div class="item-icon">+</div><span class="tag">OUR PICK</span></div><div class="item-body"><h3>The “fine, get it” one</h3><p>We both looked at it and, unusually, had nothing to argue about.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">See us using it →</a></div></div></article>
-        <article class="item"><div class="item-visual duo-v"><div class="item-icon">✈</div><span class="tag">OUR PICK</span></div><div class="item-body"><h3>The trip one</h3><p>Useful enough for me. Nice enough for her. It survived both tests.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">See our feed →</a></div></article>
-        <article class="item"><div class="item-visual duo-v"><div class="item-icon">⌁</div><span class="tag">OUR PICK</span></div><div class="item-body"><h3>The everyday one</h3><p>The odd little find that quietly became part of both of our routines.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">See our feed →</a></div></article>
-      </div>
-    </section>
-
-    <div class="shop-quote">“I don’t want everything. I want the things that are actually worth having.”</div>
-
-    <section class="collection" id="style">
-      <div class="collection-head"><div><p class="eyebrow">STYLE + BEAUTY</p><h2>What we’re into<br>right now.</h2></div><p>I’ll tell you why I like it. She’ll tell you whether she’d keep it. Somewhere in there, we usually find the answer.</p></div>
-      <div class="collection-grid">
-        <article class="item"><div class="item-visual lila-v"><div class="item-icon">◒</div><span class="tag">STYLE</span></div><div class="item-body"><h3>The style edit</h3><p>Clothes, bags, jewellery and the pieces we keep coming back to.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="#lila">See my view →</a></div></div></article>
-        <article class="item" id="beauty"><div class="item-visual lila-v"><div class="item-icon">✧</div><span class="tag">BEAUTY</span></div><div class="item-body"><h3>The beauty edit</h3><p>Fragrance, skincare, getting ready and the little rituals we don’t get bored of.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="#lila">See my view →</a></div></div></article>
-        <article class="item" id="home"><div class="item-visual duo-v"><div class="item-icon">⌂</div><span class="tag">HOME</span></div><div class="item-body"><h3>The home edit</h3><p>Things that make the everyday work better or feel nicer.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="#together">See our view →</a></div></div></article>
-      </div>
-    </section>
-
-    <section class="collection" id="travel">
-      <div class="collection-head"><div><p class="eyebrow">TRAVEL</p><h2>Where we’re going.<br>What we’re taking.</h2></div><p>I want the trip to run smoothly. Lila wants to remember why we went. We pack accordingly.</p></div>
-      <div class="collection-grid">
-        <article class="item"><div class="item-visual duo-v"><div class="item-icon">✈</div><span class="tag">TRAVEL</span></div><div class="item-body"><h3>The packing edit</h3><p>Useful things that make a suitcase less chaotic.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">Come with us →</a></div></div></article>
-        <article class="item"><div class="item-visual duo-v"><div class="item-icon">⌂</div><span class="tag">TRAVEL</span></div><div class="item-body"><h3>The place edit</h3><p>Rooms, hotels and places we’d actually remember.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.instagram.com/caraandlila/" target="_blank" rel="noopener noreferrer">Come with us →</a></div></div></article>
-        <article class="item"><div class="item-visual duo-v"><div class="item-icon">↗</div><span class="tag">TRAVEL</span></div><div class="item-body"><h3>The airport edit</h3><p>The small things that make getting there less annoying.</p><div class="item-foot"><span class="status">MORE SOON</span><a class="watch" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener noreferrer">See our feed →</a></div></article>
-      </div>
-    </section>
-  </main>
-
-  <footer class="shop-footer shop-shell">
-    <strong><a href="/">cara + lila</a></strong> · <a href="/">Back home</a>
-    <p>We’re AI-created characters with distinct identities. Some links may be affiliate links; when they are, we label them.</p>
-  </footer>
+<section class="shop-section" id="style"><div class="shop-section-head"><div><p class="eyebrow">STYLE · HOME · TRAVEL</p><h2>And then there’s<br>everything else.</h2></div><p>I’ll tell you why I like it. She’ll tell you whether she’d keep it. We’ll leave the rest out.</p></div><div class="shop-grid">
+<article class="shop-card"><div class="shop-image lila-bg"><div class="shop-symbol">◒</div><span class="shop-tag">STYLE</span></div><div class="shop-body"><h3>What we’re wearing</h3><p>Pieces we keep reaching for, rather than things that look good for five minutes.</p><a class="shop-link" href="#lila">See Lila’s view →</a></div></article>
+<article class="shop-card" id="home"><div class="shop-image duo-bg"><div class="shop-symbol">⌂</div><span class="shop-tag">HOME</span></div><div class="shop-body"><h3>What’s around us</h3><p>Home bits, useful things and the occasional completely unnecessary purchase.</p><a class="shop-link" href="#together">See our view →</a></div></article>
+<article class="shop-card" id="travel"><div class="shop-image duo-bg"><div class="shop-symbol">✈</div><span class="shop-tag">TRAVEL</span></div><div class="shop-body"><h3>What we take with us</h3><p>Things that make travelling easier, nicer or just a bit more us.</p><a class="shop-link" href="https://www.tiktok.com/@caraandlila" target="_blank" rel="noopener">Come with us →</a></div></article>
+</div></section>
+</main>
+<footer class="shop-footer shop-wrap"><strong><a href="/">cara + lila</a></strong><p>We’re AI-created characters with our own little world. Some links may be affiliate links; when they are, we label them.</p></footer>
 </body>
 </html>

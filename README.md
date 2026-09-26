@@ -1,38 +1,30 @@
-# Cara & Lila — link in bio + shop
+# Cara + Lila
 
-Mobile-first page for TikTok / Instagram **link in bio** traffic.
+A consumer-facing creator site for caraandlila.com.
 
-This is *their* page — not a company brochure.
+The public experience is intentionally **creator-first**. The homepage is not a company brochure or a product catalogue: it introduces Cara and Lila in their own voices, gives social traffic somewhere to go, shows what they are into, and then leads naturally into their shop.
 
-## Strategy (why it’s built this way)
+## Pages
 
-Creators only get **one** external link on TikTok. Best practice:
+- `index.html` — creator homepage / link-in-bio hub
+- `shop.html` — creator storefront for future TikTok Shop, affiliate and direct links
+- `styles.css` — shared homepage styles
+- `assets/cara-portrait.jpg`
+- `assets/lila-portrait.jpg`
+- `assets/cara-lifestyle.jpg`
+- `assets/lila-lifestyle.jpg`
+- `vercel.json` — static deployment config
 
-1. **Faces first** — instant recognition  
-2. **Few big buttons** — Shop, TikTok, Instagram, YouTube  
-3. **Featured products** — direct affiliate / TikTok Shop URLs  
-4. **Short disclosure** — affiliate honesty without sounding corporate  
+## Public voice
 
-Avoid long magazine layouts. People arrive from a video and want the product in 1–2 taps.
+Cara and Lila speak in first person:
 
-## Files
+- Cara: I / me / my
+- Lila: I / me / my
+- Together: we / us / our
 
-- `index.html` — the whole experience (Linktree-style)
-- `assets/cara-portrait.jpg` · `lila-portrait.jpg` — faces  
-- `assets/cara-lifestyle.jpg` · `lila-lifestyle.jpg` — product thumbs  
+Do not turn internal strategy language into public copy.
 
-Upload those four images into `assets/` if missing (GitHub → Add file → Upload files).
+## Commerce
 
-## Product links
-
-Replace `#` on the two product cards with live Shop or affiliate URLs. Update title + one-line reason in Cara’s / Lila’s voice.
-
-## Socials
-
-- https://www.tiktok.com/@caraandlila  
-- https://www.instagram.com/caraandlila/  
-- https://www.youtube.com/@caraandlila  
-
-## Domain
-
-`caraandlila.com` → Vercel project for this repo.
+Products should be added when there are real products and live destinations. Commercial/affiliate links should be clearly labelled where required.
