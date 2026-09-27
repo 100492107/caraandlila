@@ -1,19 +1,54 @@
 # Cara + Lila
 
-A consumer-facing creator site for caraandlila.com.
+A consumer-facing creator storefront for **caraandlila.com**.
 
-The public experience is intentionally **creator-first**. The homepage is not a company brochure or a product catalogue: it introduces Cara and Lila in their own voices, gives social traffic somewhere to go, shows what they are into, and then leads naturally into their shop.
+The public site is designed around two jobs:
+
+1. Make Cara + Lila recognisable.
+2. Give real product recommendations a clean, conversion-focused home.
 
 ## Pages
 
-- `index.html` — creator homepage / link-in-bio hub
-- `shop.html` — creator storefront for future TikTok Shop, affiliate and direct links
-- `styles.css` — shared homepage styles
+- `index.html` — creator homepage
+- `shop.html` — storefront with creator/category filters
+- `products.js` — editable product catalogue
+- `styles.css` — shared visual system
 - `assets/cara-portrait.jpg`
 - `assets/lila-portrait.jpg`
 - `assets/cara-lifestyle.jpg`
 - `assets/lila-lifestyle.jpg`
 - `vercel.json` — static deployment config
+
+## Product catalogue
+
+The storefront deliberately does **not** invent products.
+
+Add a real product to `products.js` with:
+
+- `name`
+- `creator`
+- `category`
+- `description`
+- `image`
+- `price`
+- `platform`
+- `merchant`
+- `destinationUrl`
+- `disclosure`
+- `featured`
+- `active`
+
+Set `active: true` only when the destination is live and the product is genuinely being featured.
+
+The same catalogue powers the homepage featured strip and the shop page, so one product entry is enough to surface it in both places.
+
+## Social
+
+Current public links:
+
+- TikTok: https://www.tiktok.com/@caraandlila
+- Instagram: https://www.instagram.com/caraandlila/
+- YouTube: https://www.youtube.com/@caraandlila
 
 ## Public voice
 
@@ -23,8 +58,8 @@ Cara and Lila speak in first person:
 - Lila: I / me / my
 - Together: we / us / our
 
-Do not turn internal strategy language into public copy.
+Keep internal business/AI strategy language out of the public-facing copy.
 
-## Commerce
+## Commercial disclosure
 
-Products should be added when there are real products and live destinations. Commercial/affiliate links should be clearly labelled where required.
+Affiliate/shop relationships should be clearly labelled where they apply. Destination pricing, availability and eligibility can change, so the site should not imply guaranteed pricing, stock or commission.
