@@ -49,6 +49,9 @@ Current public links:
 - TikTok: https://www.tiktok.com/@caraandlila
 - Instagram: https://www.instagram.com/caraandlila/
 - YouTube: https://www.youtube.com/@caraandlila
+- X: https://x.com/CaraandLila
+- Facebook: https://www.facebook.com/caraanddlila/
+- Website: https://caraandlila.com/
 
 ## Public voice
 
